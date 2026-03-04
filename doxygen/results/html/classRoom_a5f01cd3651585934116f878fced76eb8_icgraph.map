@@ -1,0 +1,7 @@
+<map id="Room::broadcastMessage" name="Room::broadcastMessage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,31,387,56"/>
+<area shape="rect" id="Node000002" href="$classRoom.html#accb09c6daa6173dd98b2fbd437d3b6e6" title=" " alt="" coords="11,5,142,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,33,142,28,142,23,182,28"/>
+<area shape="rect" id="Node000003" href="$classRoom.html#af015da285d87a783dfac3c339778a4a7" title=" " alt="" coords="5,55,148,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,58,149,62,148,57,182,53"/>
+</map>

@@ -1,0 +1,404 @@
+=== cppcheck izveštaj: /home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing ===
+
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.h:15:5: style: Class 'Canvas' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Canvas(QWidget *parent = nullptr);
+    ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvasserializer.cpp:13:52: style: Parameter 'qstring' can be declared as reference to const [constParameterReference]
+QByteArray CanvasSerializer::toQByteArray(QString &qstring)
+                                                   ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:46:49: style: inconclusive: Function 'joinRoom' argument 2 names different: declaration 'room' definition 'roomName'. [funcArgNamesDifferent]
+void Client::joinRoom(QString username, QString roomName)
+                                                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.h:32:43: note: Function 'joinRoom' argument 2 names different: declaration 'room' definition 'roomName'.
+  void joinRoom(QString username, QString room);
+                                          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:46:49: note: Function 'joinRoom' argument 2 names different: declaration 'room' definition 'roomName'.
+void Client::joinRoom(QString username, QString roomName)
+                                                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:222:38: style: inconclusive: Function 'sendMessage' argument 1 names different: declaration 'msg' definition 'message'. [funcArgNamesDifferent]
+void Client::sendMessage(QJsonObject message)
+                                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.h:75:32: note: Function 'sendMessage' argument 1 names different: declaration 'msg' definition 'message'.
+  void sendMessage(QJsonObject msg);
+                               ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:222:38: note: Function 'sendMessage' argument 1 names different: declaration 'msg' definition 'message'.
+void Client::sendMessage(QJsonObject message)
+                                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:167:22: style: Variable 'r' can be declared as reference to const [constVariableReference]
+        for(QString& r : ret){
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/client.cpp:168:24: style: Consider using std::copy algorithm instead of a raw loop. [useStlAlgorithm]
+            room_list->push_back(r);
+                       ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/mainwindow.h:20:3: style: Class 'MainWindow' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  MainWindow(QString username, QWidget *parent = nullptr);
+  ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/mainwindow.cpp:8:32: performance: Function parameter 'username' should be passed by const reference. [passedByValue]
+MainWindow::MainWindow(QString username, QWidget *parent)
+                               ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:15:15: performance: inconclusive: Technically the member function 'MessageParser::textMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject textMessage(const QString &text, const QString &name);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:9:28: note: Technically the member function 'MessageParser::textMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::textMessage(const QString &text, const QString& name)
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:15:15: note: Technically the member function 'MessageParser::textMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject textMessage(const QString &text, const QString &name);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:16:15: performance: inconclusive: Technically the member function 'MessageParser::joinRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject joinRoomMessage(QString &username, QString &roomName);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:20:28: note: Technically the member function 'MessageParser::joinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::joinRoomMessage(QString &username, QString &roomName)
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:16:15: note: Technically the member function 'MessageParser::joinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject joinRoomMessage(QString &username, QString &roomName);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:17:15: performance: inconclusive: Technically the member function 'MessageParser::createRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject createRoomMessage(QString &username, QString &room_name, int duration);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:29:28: note: Technically the member function 'MessageParser::createRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::createRoomMessage(QString &username, QString &room_name, int duration)
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:17:15: note: Technically the member function 'MessageParser::createRoomMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject createRoomMessage(QString &username, QString &room_name, int duration);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:18:15: performance: inconclusive: Technically the member function 'MessageParser::leaveRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject leaveRoomMessage();
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:39:28: note: Technically the member function 'MessageParser::leaveRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::leaveRoomMessage()
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:18:15: note: Technically the member function 'MessageParser::leaveRoomMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject leaveRoomMessage();
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:19:15: performance: inconclusive: Technically the member function 'MessageParser::chooseWordMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject chooseWordMessage(QString &word);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:46:28: note: Technically the member function 'MessageParser::chooseWordMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::chooseWordMessage(QString &word)
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:19:15: note: Technically the member function 'MessageParser::chooseWordMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject chooseWordMessage(QString &word);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:20:15: performance: inconclusive: Technically the member function 'MessageParser::getRoomsMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject getRoomsMessage();
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:54:28: note: Technically the member function 'MessageParser::getRoomsMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::getRoomsMessage()
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:20:15: note: Technically the member function 'MessageParser::getRoomsMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject getRoomsMessage();
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:22:15: performance: inconclusive: Technically the member function 'MessageParser::canvasMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  QJsonObject canvasMessage(QString &canvas);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:61:28: note: Technically the member function 'MessageParser::canvasMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject MessageParser::canvasMessage(QString &canvas)
+                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:22:15: note: Technically the member function 'MessageParser::canvasMessage' can be static (but you may consider moving to unnamed namespace).
+  QJsonObject canvasMessage(QString &canvas);
+              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:27:8: performance: inconclusive: Technically the member function 'MessageParser::isFieldValid' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  bool isFieldValid(const QJsonValue& value);
+       ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:166:21: note: Technically the member function 'MessageParser::isFieldValid' can be static (but you may consider moving to unnamed namespace).
+bool MessageParser::isFieldValid(const QJsonValue &value)
+                    ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.h:27:8: note: Technically the member function 'MessageParser::isFieldValid' can be static (but you may consider moving to unnamed namespace).
+  bool isFieldValid(const QJsonValue& value);
+       ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:20:53: style: Parameter 'username' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::joinRoomMessage(QString &username, QString &roomName)
+                                                    ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:20:72: style: Parameter 'roomName' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::joinRoomMessage(QString &username, QString &roomName)
+                                                                       ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:29:55: style: Parameter 'username' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::createRoomMessage(QString &username, QString &room_name, int duration)
+                                                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:29:74: style: Parameter 'room_name' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::createRoomMessage(QString &username, QString &room_name, int duration)
+                                                                         ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:46:55: style: Parameter 'word' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::chooseWordMessage(QString &word)
+                                                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:61:51: style: Parameter 'canvas' can be declared as reference to const [constParameterReference]
+QJsonObject MessageParser::canvasMessage(QString &canvas)
+                                                  ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/messageparser.cpp:132:18: style: Variable 'r' can be declared as reference to const [constVariableReference]
+    for(QString& r : room_split){
+                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/settings.cpp:77:45: performance: Function parameter 'username' should be passed by const reference. [passedByValue]
+void Settings::sendSettingsToCLient(QString username, QString roomName, int duration){
+                                            ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/settings.cpp:77:63: performance: Function parameter 'roomName' should be passed by const reference. [passedByValue]
+void Settings::sendSettingsToCLient(QString username, QString roomName, int duration){
+                                                              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.h:48:13: style: inconclusive: Technically the member function 'Room::getWord' can be const. [functionConst]
+    QString getWord() {return chosenWord;}
+            ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermainwindow.h:15:5: style: Class 'MainWindow' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    MainWindow(QWidget *parent = nullptr);
+    ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:7:7: warning: Member variable 'Room::noMorePlayers' is not initialized in the constructor. [uninitMemberVar]
+Room::Room(QString firstHost, QString roomName, int duration): name(roomName), duration(duration), host(firstHost)
+      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.h:43:10: style: inconclusive: Technically the member function 'Room::usernameIsTaken' can be const. [functionConst]
+    bool usernameIsTaken(QString username);
+         ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:62:12: note: Technically the member function 'Room::usernameIsTaken' can be const.
+bool Room::usernameIsTaken(QString username)
+           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.h:43:10: note: Technically the member function 'Room::usernameIsTaken' can be const.
+    bool usernameIsTaken(QString username);
+         ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:10:3: warning: Class 'Room' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+  parser = new ServerMessageParser();
+  ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:10:3: warning: Class 'Room' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+  parser = new ServerMessageParser();
+  ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:28:11: style: Local variable 'name' shadows outer variable [shadowVariable]
+  QString name = "";
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.h:17:13: note: Shadowed declaration
+    QString name;
+            ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:28:11: note: Shadow variable
+  QString name = "";
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:159:25: style: Local variable 'message' shadows outer variable [shadowVariable]
+            QJsonObject message = parser->toNewHostMessage();
+                        ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:130:17: note: Shadowed declaration
+    QJsonObject message;
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:159:25: note: Shadow variable
+            QJsonObject message = parser->toNewHostMessage();
+                        ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:7:20: performance: Function parameter 'firstHost' should be passed by const reference. [passedByValue]
+Room::Room(QString firstHost, QString roomName, int duration): name(roomName), duration(duration), host(firstHost)
+                   ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:62:36: performance: Function parameter 'username' should be passed by const reference. [passedByValue]
+bool Room::usernameIsTaken(QString username)
+                                   ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:79:34: performance: Function parameter 'word' should be passed by const reference. [passedByValue]
+void Room::checkChatWord(QString word, Thread* senderUser)
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/room.cpp:199:64: style: Parameter 't' can be declared as pointer to const [constParameterPointer]
+void Room::broadcastCanvas(const QJsonObject &message, Thread *t) {
+                                                               ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:33:11: style: Exception should be caught by reference. [catchExceptionByValue]
+        } catch (QString error_msg) {
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:44:11: style: Exception should be caught by reference. [catchExceptionByValue]
+        } catch (QString error_msg) {
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:54:11: style: Exception should be caught by reference. [catchExceptionByValue]
+        } catch (QString error_msg) {
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:63:12: style: Exception should be caught by reference. [catchExceptionByValue]
+        }  catch (QString error_msg) {
+           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:73:12: style: Exception should be caught by reference. [catchExceptionByValue]
+        }  catch (QString error_msg) {
+           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:88:11: style: Exception should be caught by reference. [catchExceptionByValue]
+        } catch (QString error_msg) {
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:119:11: style: Variable 'room' can be declared as pointer to const [constVariablePointer]
+    Room* room = new Room(username, room_name, duration);
+          ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/build/Server/ui_servermainwindow.h:33:10: performance: inconclusive: Technically the member function 'Ui_MainWindow::retranslateUi' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void retranslateUi(QWidget *MainWindow)
+         ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:15:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toStartMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toStartMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:9:34: note: Technically the member function 'ServerMessageParser::toStartMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toStartMessage()
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:15:17: note: Technically the member function 'ServerMessageParser::toStartMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toStartMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:16:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toUserJoinedMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toUserJoinedMessage(QString &username);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:17:34: note: Technically the member function 'ServerMessageParser::toUserJoinedMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toUserJoinedMessage(QString &username)
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:16:17: note: Technically the member function 'ServerMessageParser::toUserJoinedMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toUserJoinedMessage(QString &username);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:17:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toJoinRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toJoinRoomMessage(QString &roomName);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:26:34: note: Technically the member function 'ServerMessageParser::toJoinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toJoinRoomMessage(QString &roomName)
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:17:17: note: Technically the member function 'ServerMessageParser::toJoinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toJoinRoomMessage(QString &roomName);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:18:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toGameOverMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toGameOverMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:35:34: note: Technically the member function 'ServerMessageParser::toGameOverMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toGameOverMessage()
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:18:17: note: Technically the member function 'ServerMessageParser::toGameOverMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toGameOverMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:19:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toNewHostMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toNewHostMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:43:34: note: Technically the member function 'ServerMessageParser::toNewHostMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toNewHostMessage()
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:19:17: note: Technically the member function 'ServerMessageParser::toNewHostMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toNewHostMessage();
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:20:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toUserLeftMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toUserLeftMessage(QString username);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:51:34: note: Technically the member function 'ServerMessageParser::toUserLeftMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toUserLeftMessage(QString username)
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:20:17: note: Technically the member function 'ServerMessageParser::toUserLeftMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toUserLeftMessage(QString username);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:22:23: performance: inconclusive: Technically the member function 'ServerMessageParser::getTypeFromMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    ServerMessageType getTypeFromMessage(const QJsonObject& message);
+                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:67:40: note: Technically the member function 'ServerMessageParser::getTypeFromMessage' can be static (but you may consider moving to unnamed namespace).
+ServerMessageType ServerMessageParser::getTypeFromMessage(const QJsonObject& message) {
+                                       ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:22:23: note: Technically the member function 'ServerMessageParser::getTypeFromMessage' can be static (but you may consider moving to unnamed namespace).
+    ServerMessageType getTypeFromMessage(const QJsonObject& message);
+                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:23:17: performance: inconclusive: Technically the member function 'ServerMessageParser::toGetRoomsMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QJsonObject toGetRoomsMessage(const QString& rooms);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:60:34: note: Technically the member function 'ServerMessageParser::toGetRoomsMessage' can be static (but you may consider moving to unnamed namespace).
+QJsonObject ServerMessageParser::toGetRoomsMessage(const QString& rooms) {
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:23:17: note: Technically the member function 'ServerMessageParser::toGetRoomsMessage' can be static (but you may consider moving to unnamed namespace).
+    QJsonObject toGetRoomsMessage(const QString& rooms);
+                ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:24:22: performance: inconclusive: Technically the member function 'ServerMessageParser::fromJoinRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QVector<QString> fromJoinRoomMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:99:39: note: Technically the member function 'ServerMessageParser::fromJoinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QVector<QString> ServerMessageParser::fromJoinRoomMessage(const QJsonObject& message) {
+                                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:24:22: note: Technically the member function 'ServerMessageParser::fromJoinRoomMessage' can be static (but you may consider moving to unnamed namespace).
+    QVector<QString> fromJoinRoomMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:25:22: performance: inconclusive: Technically the member function 'ServerMessageParser::fromChooseWordMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QVector<QString> fromChooseWordMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:108:39: note: Technically the member function 'ServerMessageParser::fromChooseWordMessage' can be static (but you may consider moving to unnamed namespace).
+QVector<QString> ServerMessageParser::fromChooseWordMessage(const QJsonObject& message) {
+                                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:25:22: note: Technically the member function 'ServerMessageParser::fromChooseWordMessage' can be static (but you may consider moving to unnamed namespace).
+    QVector<QString> fromChooseWordMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:26:22: performance: inconclusive: Technically the member function 'ServerMessageParser::fromCreateRoomMessage' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    QVector<QString> fromCreateRoomMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:115:39: note: Technically the member function 'ServerMessageParser::fromCreateRoomMessage' can be static (but you may consider moving to unnamed namespace).
+QVector<QString> ServerMessageParser::fromCreateRoomMessage(const QJsonObject& message) {
+                                      ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.h:26:22: note: Technically the member function 'ServerMessageParser::fromCreateRoomMessage' can be static (but you may consider moving to unnamed namespace).
+    QVector<QString> fromCreateRoomMessage(const QJsonObject& message);
+                     ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:51:60: performance: Function parameter 'username' should be passed by const reference. [passedByValue]
+QJsonObject ServerMessageParser::toUserLeftMessage(QString username)
+                                                           ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:17:63: style: Parameter 'username' can be declared as reference to const [constParameterReference]
+QJsonObject ServerMessageParser::toUserJoinedMessage(QString &username)
+                                                              ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/servermessageparser.cpp:26:61: style: Parameter 'roomName' can be declared as reference to const [constParameterReference]
+QJsonObject ServerMessageParser::toJoinRoomMessage(QString &roomName)
+                                                            ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:50:34: style: inconclusive: Function 'setRoomName' argument 1 names different: declaration 'room_name' definition 'name'. [funcArgNamesDifferent]
+void Thread::setRoomName(QString name) {
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.h:18:30: note: Function 'setRoomName' argument 1 names different: declaration 'room_name' definition 'name'.
+    void setRoomName(QString room_name);
+                             ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:50:34: note: Function 'setRoomName' argument 1 names different: declaration 'room_name' definition 'name'.
+void Thread::setRoomName(QString name) {
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:50:34: performance: Function parameter 'name' should be passed by const reference. [passedByValue]
+void Thread::setRoomName(QString name) {
+                                 ^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/build/Application/ui_mainwindow.h:22:1: error: The one definition rule is violated, different classes/structs have the same name 'Ui_MainWindow' [ctuOneDefinitionRuleViolation]
+class Ui_MainWindow
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/build/Server/ui_servermainwindow.h:18:1: note: The one definition rule is violated, different classes/structs have the same name 'Ui_MainWindow'
+class Ui_MainWindow
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/build/Application/ui_mainwindow.h:22:1: note: The one definition rule is violated, different classes/structs have the same name 'Ui_MainWindow'
+class Ui_MainWindow
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.cpp:16:0: style: The function 'isModified' is never used. [unusedFunction]
+bool Canvas::isModified() const {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.cpp:59:0: style: The function 'mousePressEvent' is never used. [unusedFunction]
+void Canvas::mousePressEvent(QMouseEvent *event)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.cpp:67:0: style: The function 'mouseMoveEvent' is never used. [unusedFunction]
+void Canvas::mouseMoveEvent(QMouseEvent *event)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.cpp:73:0: style: The function 'mouseReleaseEvent' is never used. [unusedFunction]
+void Canvas::mouseReleaseEvent(QMouseEvent *event)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/canvas.cpp:83:0: style: The function 'paintEvent' is never used. [unusedFunction]
+void Canvas::paintEvent(QPaintEvent *event)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/game.cpp:64:0: style: The function 'getCanvas' is never used. [unusedFunction]
+Canvas *Game::getCanvas() const
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/game.cpp:121:0: style: The function 'getDuration' is never used. [unusedFunction]
+int Game::getDuration() const
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/game.cpp:126:0: style: The function 'setDuration' is never used. [unusedFunction]
+void Game::setDuration(int newDuration)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/game.cpp:132:0: style: The function 'closeEvent' is never used. [unusedFunction]
+void Game::closeEvent(QCloseEvent *event)
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Application/mainwindow.cpp:70:0: style: The function 'gameWindowClosed' is never used. [unusedFunction]
+void MainWindow::gameWindowClosed() {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:16:0: style: The function 'incomingConnection' is never used. [unusedFunction]
+void Server::incomingConnection(qintptr socketDescriptor) {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/server.cpp:25:0: style: The function 'parseMessage' is never used. [unusedFunction]
+void Server::parseMessage(const QJsonObject& message, Thread* thread) {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:20:0: style: The function 'disconnect' is never used. [unusedFunction]
+void Thread::disconnect() {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:35:0: style: The function 'onMessageReadyRead' is never used. [unusedFunction]
+void Thread::onMessageReadyRead() {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:41:0: style: The function 'onDisconnectedMessage' is never used. [unusedFunction]
+void Thread::onDisconnectedMessage() {
+^
+/home/jelena/Desktop/faks/vs/07-GuessMyDrawing-master/07-GuessMyDrawing/Server/thread.cpp:46:0: style: The function 'getSocketDescriptor' is never used. [unusedFunction]
+quintptr Thread::getSocketDescriptor() {
+^
+nofile:0:0: information: Unmatched suppression: preprocessorErrorDirective [unmatchedSuppression]
+
+*/Qt*/*:-1:0: information: Unmatched suppression: * [unmatchedSuppression]
+
+^
+*/usr/include/*:-1:0: information: Unmatched suppression: * [unmatchedSuppression]
+
+^
+nofile:0:0: information: Active checkers: 172/592 (use --checkers-report=<filename> to see details) [checkersReport]
+
+
+=== Kraj izveštaja ===

@@ -1,0 +1,13 @@
+<map id="Client::errorConnecting" name="Client::errorConnecting">
+<area shape="rect" id="Node000001" title=" " alt="" coords="277,104,449,129"/>
+<area shape="rect" id="Node000002" href="$classChooseWord.html#aa7ddecc344cac8b93a99462e1865cf96" title=" " alt="" coords="21,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,99,284,71,228,44,191,33,193,28,230,40,286,66,334,94"/>
+<area shape="rect" id="Node000003" href="$classExistingRooms.html#a4968185b32688d58ded9990ead71ce43" title=" " alt="" coords="5,55,229,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="286,104,181,83,182,77,287,99"/>
+<area shape="rect" id="Node000004" href="$classGame.html#acefdfd4587c0eacc0cea4d181cb35c76" title=" " alt="" coords="63,104,171,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="264,119,172,119,172,114,264,114"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#aa6112570995fd1ab2231fc56d5083163" title=" " alt="" coords="19,153,216,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="287,135,182,156,181,151,286,129"/>
+<area shape="rect" id="Node000006" href="$classSettings.html#ab11f9300ee48dafabddd3df2c5ae00c5" title=" " alt="" coords="49,203,185,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="333,139,286,167,230,192,186,206,185,201,228,188,283,162,330,134"/>
+</map>

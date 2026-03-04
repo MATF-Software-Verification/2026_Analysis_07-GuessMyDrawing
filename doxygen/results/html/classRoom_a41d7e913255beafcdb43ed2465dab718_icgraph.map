@@ -1,0 +1,7 @@
+<map id="Room::start" name="Room::start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,31,368,56"/>
+<area shape="rect" id="Node000002" href="$classRoom.html#accb09c6daa6173dd98b2fbd437d3b6e6" title=" " alt="" coords="48,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,38,179,29,179,23,256,33"/>
+<area shape="rect" id="Node000003" href="$classRoom.html#ac9faf4c0d30572987a41ef897cf73cc9" title=" " alt="" coords="5,55,221,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,53,222,57,221,52,256,48"/>
+</map>
