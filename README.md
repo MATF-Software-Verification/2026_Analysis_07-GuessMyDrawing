@@ -1,6 +1,6 @@
 # Analiza projekta GuessMyDrawing
 
-U ovom direktorijumu nalazi se analiza softverskog projekta **GuessMyDrawing** izrađena u okviru seminarskog rada iz kursa *Verifikacija softvera* na master studijama Matematičkog fakulteta Univerziteta u Beogradu.
+U ovom direktorijumu nalazi se analiza softverskog projekta **GuessMyDrawing** izrađena u okviru samostalnog projekta iz kursa *Verifikacija softvera* na master studijama Matematičkog fakulteta Univerziteta u Beogradu.
 
 ## Autor
 
@@ -19,11 +19,30 @@ Grana projekta na kojoj je izvršena analiza: master.
 
 ## Prevođenje projekta
 
-Za prevođenje projekta potrebno je instalirati Qt i CMake alate. Nakon instalacije zavisnosti projekat se može prevesti kreiranjem build direktorijuma, pokretanjem CMake konfiguracije i kompilacijom projekta pomoću alata make.
+NNajpre je potrebno kreirati direktorijum za build i preći u njega:
+
+mkdir build
+cd build
+
+Zatim se pokreće generisanje Makefile fajla pomoću komande:
+
+qmake ..
+
+Nakon toga projekat se kompajlira pomoću komande:
+
+make
 
 ## Pokretanje aplikacije
 
-Nakon uspešne kompilacije moguće je pokrenuti server i klijent. Server se pokreće izvršavanjem programa Server, dok se klijentska aplikacija pokreće izvršavanjem programa Application.
+Nakon uspešne kompilacije moguće je pokrenuti serverski i klijentski deo aplikacije.
+
+Server se pokreće komandom:
+
+./Server
+
+Nakon pokretanja servera može se pokrenuti klijentska aplikacija:
+
+./Application
 
 ---
 # Doxygen
@@ -46,19 +65,39 @@ Nakon toga skripta se pokreće komandom:
 
 ---
 
-# Catch2
+## Catch2
 
-Catch2 je C++ biblioteka koja omogućava pisanje i izvršavanje testova. U okviru projekta korišćena je za implementaciju unit i integracionih testova.
+Catch2 je C++ biblioteka koja se koristi za pisanje i izvršavanje testova. U okviru projekta korišćena je za implementaciju unit i integracionih testova.
 
-Instalacija biblioteke:
+Instalacija biblioteke vrši se komandom:
 
 sudo apt install catch2
 
-Pokretanje testova vrši se pomoću skripte.
+## Pokretanje testova
 
-chmod +x run_tests.sh
+Testovi se prevode korišćenjem CMake sistema za izgradnju.
 
-./run_tests.sh
+Najpre je potrebno preći u direktorijum sa testovima i kreirati direktorijum za build:
+
+mkdir build  
+cd build  
+
+Zatim se pokreće konfiguracija projekta:
+
+cmake ..
+
+Nakon toga se test program kompajlira:
+
+make
+
+Posle uspešne kompilacije generiše se izvršni fajl `seminar_tests`.  
+Testovi se pokreću komandom:
+
+./bin/seminar_tests
+
+Moguće je pokrenuti i samo određene testove korišćenjem filtera. Na primer:
+
+./bin/seminar_tests "[seminar][unit]" seminar_tests "[seminar][integration]"
 
 ---
 
@@ -128,4 +167,4 @@ chmod +x run_clang.sh
 
 # Zaključak analize
 
-Na osnovu sprovedene statičke i dinamičke analize može se zaključiti da projekat GuessMyDrawing poseduje stabilnu osnovnu funkcionalnost i relativno dobar nivo pokrivenosti testovima. Analiza memorije nije ukazala na značajna curenja memorije tokom izvršavanja programa, dok su alati za statičku analizu identifikovali manji broj upozorenja koja se uglavnom odnose na stil koda i potencijalna poboljšanja implementacije. Kombinacija različitih alata omogućila je detaljan uvid u kvalitet softverskog sistema i ukazala na moguće pravce daljeg unapređenja.
+Na osnovu sprovedene statičke i dinamičke analize može se zaključiti da projekat GuessMyDrawing poseduje stabilnu  funkcionalnost. Analiza memorije izvršena pomoću alata Valgrind nije ukazala na značajna curenja memorije tokom izvršavanja programa. Alati za statičku analizu, kao što su Cppcheck i Clang-Tidy, identifikovali su manji broj upozorenja koja se uglavnom odnose na stil koda i potencijalna poboljšanja implementacije. Kombinacija korišćenih alata omogućila je detaljniji uvid u kvalitet softverskog sistema i ukazala na moguće pravce njegovog daljeg unapređenja. Analiza pokrivenosti koda pokazala je da početna pokrivenost testovima nije bila naročito visoka, zbog čega su implementirani dodatni unit i integracioni testovi kako bi se obuhvatio veći deo funkcionalnosti sistema i povećala pouzdanost aplikacije.
