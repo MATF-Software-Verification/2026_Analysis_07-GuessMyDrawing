@@ -97,7 +97,7 @@ Testovi se pokreću komandom:
 
 Moguće je pokrenuti i samo određene testove korišćenjem filtera. Na primer:
 
-./bin/seminar_tests "[seminar][unit]" seminar_tests "[seminar][integration]"
+./bin/seminar_tests "[seminar][unit]" ili ./bin/seminar_tests "[seminar][integration]"
 
 ---
 
