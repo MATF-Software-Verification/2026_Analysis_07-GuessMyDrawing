@@ -19,7 +19,7 @@ Grana projekta na kojoj je izvršena analiza: master.
 
 ## Prevođenje projekta
 
-NNajpre je potrebno kreirati direktorijum za build i preći u njega:
+Najpre je potrebno kreirati direktorijum za build i preći u njega:
 
 mkdir build
 cd build
