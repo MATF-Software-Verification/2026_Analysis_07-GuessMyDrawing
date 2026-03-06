@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# cppcheck – statička analiza (GuessMyDrawing). Kao kod koleginice: suppress Qt i sistem.
-# Upotreba: ./run_cppcheck.sh [putanja_do_07-GuessMyDrawing-master]
+
+
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
@@ -19,7 +19,7 @@ if ! command -v cppcheck &>/dev/null; then
   exit 1
 fi
 
-# --library=qt = ugrađene Qt definicije (bez -I za Qt), da cppcheck parsira naš kod i prijavi nalaze
+
 CPPCHECK_ARGS=(
   -q
   --enable=all

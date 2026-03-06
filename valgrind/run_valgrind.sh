@@ -22,7 +22,7 @@ trap cleanup EXIT
 
 mkdir -p "$RESULTS_DIR"
 
-# Izvršni fajlovi
+
 APP_BIN="${BUILD_DIR}/Application/Application"
 SERVER_BIN="${BUILD_DIR}/Server/Server"
 if [ ! -f "$APP_BIN" ]; then

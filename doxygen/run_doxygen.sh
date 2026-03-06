@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Doxygen – generisanje dokumentacije iz izvornog koda (GuessMyDrawing).
-# Upotreba: ./run_doxygen.sh [putanja_do_07-GuessMyDrawing-master]
+
+
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
