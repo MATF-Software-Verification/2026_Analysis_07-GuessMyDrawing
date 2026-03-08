@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['data_0',['data',['../structqt__meta__stringdata__Canvas__t.html#a4d8465c474b93a02b8b4e3f3aef638fd',1,'qt_meta_stringdata_Canvas_t::data'],['../structqt__meta__stringdata__ChooseWord__t.html#a2b32b662613adc7dd7a3866560d0212d',1,'qt_meta_stringdata_ChooseWord_t::data'],['../structqt__meta__stringdata__Client__t.html#addb41f080817a6886a11a1346a0d774d',1,'qt_meta_stringdata_Client_t::data'],['../structqt__meta__stringdata__ExistingRooms__t.html#a75411f8e6275649a863c2a1d523a59ee',1,'qt_meta_stringdata_ExistingRooms_t::data'],['../structqt__meta__stringdata__Game__t.html#ac4252eff63681f816ff91a20c600351b',1,'qt_meta_stringdata_Game_t::data'],['../structqt__meta__stringdata__MainWindow__t.html#af598c0b01c666753185a38017d12d5cc',1,'qt_meta_stringdata_MainWindow_t::data'],['../structqt__meta__stringdata__PopUp__t.html#a5506c1294e061c30059bc0e778fcf782',1,'qt_meta_stringdata_PopUp_t::data'],['../structqt__meta__stringdata__Settings__t.html#a6e2084080846c0e25e7d8a37004113dc',1,'qt_meta_stringdata_Settings_t::data'],['../structqt__meta__stringdata__Server__t.html#a5b153736cc93f9263375356dea0800d0',1,'qt_meta_stringdata_Server_t::data'],['../structqt__meta__stringdata__Thread__t.html#a7cdf3c12d56048f146f06f885548dd9d',1,'qt_meta_stringdata_Thread_t::data']]],
-  ['disableinputs_1',['disableInputs',['../classSettings.html#ad544026edd24da458480646b34fa35f1',1,'Settings']]],
-  ['disconnect_2',['disconnect',['../classThread.html#aa887469f96dfd806a9a8039e44592061',1,'Thread']]],
-  ['disconnectfromhost_3',['disconnectFromHost',['../classClient.html#acefa70c7d756d8b0dd0d7be3d02a981d',1,'Client']]],
-  ['duration_4',['DURATION',['../classMessageType.html#a289485a3b3f0e7df8265339e7d3f8c58',1,'MessageType']]]
-];

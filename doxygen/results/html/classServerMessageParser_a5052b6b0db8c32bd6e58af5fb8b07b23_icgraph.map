@@ -1,7 +1,0 @@
-<map id="ServerMessageParser::fromChooseWordMessage" name="ServerMessageParser::fromChooseWordMessage">
-<area shape="rect" id="Node000001" title=" " alt="" coords="473,5,673,45"/>
-<area shape="rect" id="Node000002" href="$classServer.html#ae9fa68d3cbb32cbe503b45d04f8423a3" title=" " alt="" coords="259,13,425,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,28,426,28,426,23,460,23"/>
-<area shape="rect" id="Node000003" href="$classServer.html#a3952d37b7bc53a4377f411d9ccaa9d62" title=" " alt="" coords="5,13,211,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,28,211,28,211,23,245,23"/>
-</map>

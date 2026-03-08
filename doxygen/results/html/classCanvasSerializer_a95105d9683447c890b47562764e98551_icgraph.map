@@ -1,9 +1,0 @@
-<map id="CanvasSerializer::toQByteArray" name="CanvasSerializer::toQByteArray">
-<area shape="rect" id="Node000001" title=" " alt="" coords="620,5,812,45"/>
-<area shape="rect" id="Node000002" href="$classCanvas.html#a86a3db02dd6023bc640ac7f6a615984a" title=" " alt="" coords="373,13,572,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="606,28,572,28,572,23,606,23"/>
-<area shape="rect" id="Node000003" href="$classGame.html#a09ad2504940053c3f2dc31874e4c818c" title=" " alt="" coords="161,13,325,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,28,326,28,326,23,360,23"/>
-<area shape="rect" id="Node000004" href="$classGame.html#acefdfd4587c0eacc0cea4d181cb35c76" title=" " alt="" coords="5,13,113,38"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="147,28,114,28,114,23,147,23"/>
-</map>

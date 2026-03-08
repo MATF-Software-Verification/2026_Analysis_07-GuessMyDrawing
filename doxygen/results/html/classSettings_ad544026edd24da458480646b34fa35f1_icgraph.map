@@ -1,9 +1,0 @@
-<map id="Settings::disableInputs" name="Settings::disableInputs">
-<area shape="rect" id="Node000001" title=" " alt="" coords="523,42,693,67"/>
-<area shape="rect" id="Node000002" href="$classMainWindow.html#a92224a974496ef51a6c1a387f7fbdadd" title=" " alt="" coords="251,5,475,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="509,46,475,41,475,36,509,40"/>
-<area shape="rect" id="Node000004" href="$classSettings.html#ab11f9300ee48dafabddd3df2c5ae00c5" title=" " alt="" coords="295,70,431,95"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="509,69,431,78,431,72,509,63"/>
-<area shape="rect" id="Node000003" href="$classMainWindow.html#aa6112570995fd1ab2231fc56d5083163" title=" " alt="" coords="5,13,203,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,28,203,28,203,23,237,23"/>
-</map>
