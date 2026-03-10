@@ -122,6 +122,8 @@ chmod  +x run_massif.sh
 Pregled Massif izveštaja
 
 ms_print massif.out
+
+
 ---
 
 # Cppcheck
