@@ -119,7 +119,7 @@ chmod  +x run_massif.sh
 
 ./run_massif.sh
 
-## Pregled Massif izveštaja
+Pregled Massif izveštaja
 
 ms_print massif.out
 ---
