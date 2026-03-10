@@ -45,25 +45,7 @@ Nakon pokretanja servera može se pokrenuti klijentska aplikacija:
 ./Application
 
 ---
-# Doxygen
 
-Doxygen je alat koji omogućava automatsko generisanje dokumentacije na osnovu komentara u izvornom kodu. Korišćenjem ovog alata generisana je HTML dokumentacija projekta koja omogućava lakši pregled strukture sistema, klasa i funkcija.
-
-Instalacija alata:
-
-sudo apt install doxygen
-
-Pokretanje generisanja dokumentacije vrši se pomoću skripte.
-
-Najpre je potrebno dati dozvolu za izvršavanje skripte:
-
-chmod +x run_doxygen.sh
-
-Nakon toga skripta se pokreće komandom:
-
-./run_doxygen.sh
-
----
 
 ## Catch2
 
@@ -125,12 +107,21 @@ Instalacija alata:
 
 sudo apt install valgrind
 
-Pokretanje analize memorije:
+## Pokretanje Memcheck analize
 
 chmod +x run_valgrind.sh
 
 ./run_valgrind.sh
 
+## Pokretanje Massif analize
+
+chmod  +x run_massif.sh
+
+./run_massif.sh
+
+## Pregled Massif izveštaja
+
+ms_print massif.out
 ---
 
 # Cppcheck
